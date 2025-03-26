@@ -28,7 +28,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/explore", exploreRoutes);
 
 
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     connectDb();
