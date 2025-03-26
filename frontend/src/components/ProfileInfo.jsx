@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiThought } from "react-icons/tfi";
 import { FaEye } from "react-icons/fa";
 import { formatMemberSince } from "../utils/fucntions";
+import LikeProfile from "./LikeProfile";
 
 
 const ProfileInfo = ({userProfile}) => {
@@ -36,6 +37,7 @@ const ProfileInfo = ({userProfile}) => {
                         <img src={userProfile?.avatar_url} className='rounded-md w-24 h-24 mb-2' alt='' />
                     </a>
                     <div className='flex gap-2 items-center flex-col'>
+                        <LikeProfile  userProfile={userProfile} />
                         <a
                             href={userProfile?.html_url}
                             target='_blank'

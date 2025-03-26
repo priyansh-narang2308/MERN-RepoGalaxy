@@ -22,7 +22,7 @@ const HomePage = () => {
 
   // defualt value will be null
   // use callback to aoid the infinite loop errorr
-  const getUserProfileAndRepos = useCallback(async (username = "burakorkmez") => {
+  const getUserProfileAndRepos = useCallback(async (username = "priyansh-narang2308") => {
 
     setLoading(true);
     try {
