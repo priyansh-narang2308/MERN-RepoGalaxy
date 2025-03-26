@@ -27,23 +27,16 @@ const HomePage = () => {
     setLoading(true);
     try {
 
-      // this is fort he user profile 
-      const userResponse = await fetch(`https://api.github.com/users/${username}`, {
-        headers: {
-          authorization: `token ${import.meta.env.VITE_GITHUB_API_TOKEN}`
-        }
-      });
-      const userProfile = await userResponse.json();
-      setUserProfile(userProfile);
+      const res = await fetch(`http://localhost:5000/api/users/profile/${username}`);
+      const { repos, userProfile } = await res.json();
 
-      // this for the repos
-      const repoResponse = await fetch(userProfile.repos_url);
-      const repos = await repoResponse.json();
+
       setRepos(repos);
 
+
+      setUserProfile(userProfile)//to show the profile
       // console.log("User profile: ", userProfile);
       // console.log("Repos : ", repos);
-
 
       return { userProfile, repos };
 

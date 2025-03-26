@@ -73,8 +73,7 @@ const ProfileInfo = ({userProfile}) => {
                         {userProfile?.twitter_username}
                     </a>
                 ) : null}
-
-[]                <div className='my-2'>
+            <div className='my-2'>
                     <p className='text-gray-600 font-bold text-sm'>Member since</p>
                     <p className=''>{formatedDate}</p>
                 </div>
@@ -101,22 +100,22 @@ const ProfileInfo = ({userProfile}) => {
 
             <div className='flex flex-wrap gap-2 mx-4'>
                 <div className='flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24'>
-                    <RiUserFollowFill className='w-5 h-5 text-blue-800' />
+                    <RiUserFollowFill className='w-5 h-5 text-orange-600' />
                     <p className='text-xs'>Followers: {userProfile?.followers}</p>
                 </div>
 
                 <div className='flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24'>
-                    <RiUserFollowLine className='w-5 h-5 text-blue-800' />
+                    <RiUserFollowLine className='w-5 h-5 text-orange-600' />
                     <p className='text-xs'>Following: {userProfile?.following}</p>
                 </div>
 
                 <div className='flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24'>
-                    <RiGitRepositoryFill className='w-5 h-5 text-blue-800' />
+                    <RiGitRepositoryFill className='w-5 h-5 text-orange-600' />
                     <p className='text-xs'>Public repos: {userProfile?.public_repos}</p>
                 </div>
 
                 <div className='flex items-center gap-2 bg-glass rounded-lg p-2 flex-1 min-w-24'>
-                    <RiGitRepositoryFill className='w-5 h-5 text-blue-800' />
+                    <RiGitRepositoryFill className='w-5 h-5 text-orange-600' />
                     <p className='text-xs'>Public gists: {userProfile?.public_gists}</p>
                 </div>
             </div>
