@@ -5,11 +5,14 @@ import SignUpPage from "./pages/SignUpPage";
 import ExplorePage from "./pages/ExplorePage";
 import LikesPage from "./pages/LikesPage";
 import SideBar from "./components/SideBar";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
   return (
     <div className="flex ">
+      <Toaster position="top-center" reverseOrder={false} />
+
       <SideBar />
       <div className="max-w-5xl my-5 text-white mx-auto transition-all duration-300 flex-1">
         <Routes>
